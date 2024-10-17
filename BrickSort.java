@@ -5,25 +5,34 @@ public class BrickSort {
         brickSorting(arr);
     }
 
+    public static void swap(int arr[], int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+
+    }
+
     static void brickSorting(int arr[]) {
         int n = arr.length;
         boolean flag;
-        int temp = 0;
+        // int temp = 0;
         while (true) {
             flag = false;
             for (int i = 0; i <= n - 2; i += 2) {
                 if (arr[i] > arr[i + 1]) {
-                    temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
+                    swap(arr, i, i + 1);
+                    // temp = arr[i];
+                    // arr[i] = arr[i + 1];
+                    // arr[i + 1] = temp;
                     flag = true;
                 }
             }
             for (int i = 1; i <= n - 2; i += 2) {
                 if (arr[i] > arr[i + 1]) {
-                    temp = arr[i];
-                    arr[i] = arr[i + 1];
-                    arr[i + 1] = temp;
+                    swap(arr, i, i + 1);
+                    // temp = arr[i];
+                    // arr[i] = arr[i + 1];
+                    // arr[i + 1] = temp;
                     flag = true;
                 }
             }

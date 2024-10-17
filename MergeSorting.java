@@ -1,10 +1,14 @@
 public class MergeSorting {
     public static void main(String[] args) {
-        int arr[] = { 10, 14, 22, 8, 13 };
+        int arr[] = { 10, 8, 25, 45, 12, 36, 65, 19 };
         mergeSorting(arr);
         int n = arr.length;
         for (int i = 0; i < n; i++) {
-            System.out.println(arr[i]);
+            if (i == arr.length - 1) {
+                System.out.print(arr[i]);
+            } else {
+                System.out.print(arr[i] + ",");
+            }
         }
     }
 
