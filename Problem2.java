@@ -7,13 +7,14 @@ public class Problem2 {
     }
 
     static void secondSmallest(int arr[]) {
-        int max = Integer.MIN_VALUE;
-        int secondLarge = Integer.MIN_VALUE;
+        int max = Integer.MAX_VALUE;
+        System.out.println(max);
+        int secondLarge = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
+            if (arr[i] < max) {
                 secondLarge = max;
                 max = arr[i];
-            } else if (arr[i] > secondLarge && arr[i] != max) {
+            } else if (arr[i] < secondLarge && arr[i] != max) {
                 secondLarge = arr[i];
             }
         }
